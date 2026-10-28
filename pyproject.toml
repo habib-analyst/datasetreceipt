@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datasetreceipt"
+version = "0.1.0"
+description = "Before you train, get the receipt: cross-split leakage, metadata shortcuts, and background-only label signals for image datasets, with one go / caution / no-go verdict."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Habib Ur Rehman" }]
+keywords = [
+  "dataset-quality",
+  "data-leakage",
+  "near-duplicates",
+  "shortcut-learning",
+  "perceptual-hashing",
+  "dataset-audit",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+  "Pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/habib-analyst/datasetreceipt"
+Repository = "https://github.com/habib-analyst/datasetreceipt"
+Issues = "https://github.com/habib-analyst/datasetreceipt/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+datasetreceipt = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
